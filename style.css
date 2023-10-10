@@ -1,0 +1,37 @@
+.container-fluid {
+  background-color: rgb(195, 195, 240);
+}
+.custom-outline-btn {
+  color: #8075df; /* Text color */
+  background-color: transparent; /* Background color */
+  border: 1px solid #8075df; /* Border color */
+}
+
+.carousel-item {
+  font-weight: bolder;
+}
+
+.carousel-item img {
+  border-radius: 15px;
+
+}
+
+#container1 {
+  margin-left: 15px;
+  min-height: calc(100vh-40px);
+}
+
+#row2 {
+  margin-left: 0px;
+  margin-top:20px;
+}
+
+
+.card {
+  margin:2px;
+  padding: 5px;
+  text-align: center;
+  min-height: 500px;
+  width: 320px;
+  
+}
