@@ -1,5 +1,11 @@
+body {
+  background-color: rgb(242, 244, 245);
+  font-family: 'Mulish';
+}
 #navcontainer {
   background-color: rgb(195, 195, 240);
+  /* border: 1px solid black; */
+  border-radius: 15px;
 }
 .custom-outline-btn {
   color: #8075df; /* Text color */
@@ -7,20 +13,38 @@
   border: 1px solid #8075df; /* Border color */
 }
 
+#carouselm {
+  margin-top:6px;
+}
 .carousel-item {
   font-weight: bolder;
+}
+.carousel-inner {
+  border-radius: 15px;
 }
 
 .carousel-item img {
   border-radius: 15px;
+  width:400px;
+  height:400px;
 
 }
-
+#row2 ul {
+  margin-top: 60px;
+}
+#row2 li {
+  margin:2px;
+  padding:5px;
+  border-radius: 5px;
+  background-color: #c1bcf3;
+}
 
  
 #searchResults, #currentWeather {
-
+  height:400px;
+  border-radius: 15px;
   border: 1px solid black;
+  margin-top: 0px;
 }
 
 
@@ -36,5 +60,10 @@
   /* text-align: center; */
   min-height: 550px;
   width: 320px;
-  
+  box-shadow: 5px 2px 5px grey;
+}
+
+.card-title {
+  text-align:center;
+  font-weight: bold;
 }
