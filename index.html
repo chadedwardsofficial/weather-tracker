@@ -10,7 +10,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
+    <div class="container-fluid" id="navcontainer">
       <a class="navbar-brand">Weather Tracker &#9748</a>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -21,9 +21,9 @@
   </nav>
 <!-- Navbar -->
 
-<div class="container" id="container1">
+<div class="container-fluid" id="container1">
   <div class="row">
-    <div class="col-7">
+    <div class="col">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -64,8 +64,11 @@
 </div>
 
 </div>
-<div class="col-7" id="searchResults">
-
+<div class="col m-2" id="currentWeather">
+<h2>Current Weather</h2>
+</div>
+<div class="col m-2" id="searchResults">
+<h2>Recent</h2>
 </div>
 </div>
 
@@ -81,7 +84,7 @@
       <div class="card-body">
         <h5 class="card-title">Monday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
@@ -95,7 +98,7 @@
       <div class="card-body">
         <h5 class="card-title">Tuesday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
@@ -109,7 +112,7 @@
       <div class="card-body">
         <h5 class="card-title">Wednesday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
@@ -123,7 +126,7 @@
       <div class="card-body">
         <h5 class="card-title">Thursday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
@@ -137,7 +140,7 @@
       <div class="card-body">
         <h5 class="card-title">Friday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
@@ -151,7 +154,7 @@
       <div class="card-body">
         <h5 class="card-title">Saturday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
@@ -165,7 +168,7 @@
       <div class="card-body">
         <h5 class="card-title">Sunday</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Humidity</li>
+          <li class="list-group-item">Humidity:<span class="humidity"></span></li>
           <li class="list-group-item">Temperature</li>
           <li class="list-group-item">Wind Speed</li>
         </ul>
