@@ -13,11 +13,6 @@ searchButton.on("click", function(){
   getWeather(userInput.val())
 });
 
-function updateTime() {
-  var currentTimeElement = document.getElementById("current-time");
-  var currentTime = dayjs().format("dddd, MMMM D, YYYY h:mm:ss A");
-  currentTimeElement.innerHTML = currentTime;
-}
 
 function getWeather (city) {
   var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+ city + '&appid=eabc2fd5cfcb286e37818aa2754f1eea&units=imperial';
