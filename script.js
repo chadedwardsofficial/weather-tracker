@@ -5,10 +5,10 @@ var searchButton = $('#searchButton');
 var apiKey = 'eabc2fd5cfcb286e37818aa2754f1eea'
 var currentHour = parseInt(dayjs().format("HH"));
 var forecastRow = $('#row2');
+var citySearches = JSON.parse(localStorage.getItem("citySearches")) || [];
 
-
-searchButton.on("click", function(){
-
+searchButton.on("click", function(event){
+event.preventDefault();
   console.log(userInput.val())
   getWeather(userInput.val())
 });
@@ -33,7 +33,8 @@ fetch(requestUrl)
     currentWeather.append('<p>Humidity: '+data.main.humidity+'</p>')
     currentWeather.append('<p>Wind: '+data.wind.speed+'</p>')
 
-    displayResults.append(`<button></button>`)
+    saveCityToLocalStorage(data.name);
+    
   });
 }
 
@@ -75,3 +76,36 @@ fetch(requestUrl)
 
 
 
+
+
+
+
+
+function saveCityToLocalStorage(cityName) {
+
+  if (typeof Storage !== "undefined") {
+
+    if (citySearches.includes(cityName) === false) {
+
+      citySearches.push(cityName);
+  
+      localStorage.setItem("citySearches", JSON.stringify(citySearches));
+      var btn = document.createElement("button");
+      btn.textContent = cityName;
+      btn.onclick = cityButton;
+      $("#searchResults").append(btn);
+    }
+  } else {
+    console.log("Local storage is not supported in this browser.");
+  }
+}
+function cityButton() {
+  console.log(this);
+  getWeather(this.textContent);
+}
+for (i = 0; i < citySearches.length; i++) {
+  var btn = document.createElement("button");
+  btn.textContent = citySearches[i];
+  btn.onclick = cityButton;
+  $("#searchResults").append(btn);
+}

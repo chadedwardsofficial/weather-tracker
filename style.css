@@ -47,10 +47,15 @@ body {
   flex-direction: column;
 }
 #searchResults button {
-  height: 20px;
+  text-align: center;
+  font-size: 13px;
+  height: 30px;
   width: 100px;
   border-radius: 15px;
+  margin: 5px;
+  
 }
+
 #searchResults, #currentWeather {
   height:400px;
   border-radius: 15px;
